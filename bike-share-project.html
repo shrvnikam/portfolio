@@ -36,143 +36,54 @@
       width: 80%;
       max-width: 900px;
     }
-    .code-title {
-      font-size: 1.5rem;
-      margin-top: 30px;
-    }
-    pre {
-      background-color: #f5f5f5;
-      padding: 20px;
-      border-radius: 5px;
-      font-size: 1rem;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 1rem;
-      color: #7F8C8D;
-    }
   </style>
 </head>
 <body>
-
   <div class="container">
     <div class="project-title">Bike-Share Analysis</div>
     <div class="project-description">
-      This project analyzes the usage of Cyclistic bikes, comparing the behavior of annual members and casual riders to drive recommendations for increasing revenue. The analysis focuses on identifying patterns in ride durations, ride types, and the time of year and day when bikes are used.
+      This project analyzes the usage of Cyclistic bikes, comparing the behavior of annual members and casual riders to drive recommendations for increasing revenue.
     </div>
 
     <div class="visualization-title">Visualizations</div>
 
     <h3>1. Average Ride Duration by User Type</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Average Ride Duration by User Type.png" class="visualization-img" alt="Average Ride Duration by User Type">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Average%20Ride%20Duration%20by%20User%20Type.png" class="visualization-img" alt="Average Ride Duration by User Type">
 
     <h3>2. Heatmap of Rides by Day of the Week and User Type</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Heatmap of Rides by Day of the Week and User Type.png" class="visualization-img" alt="Heatmap of Rides by Day of the Week and User Type">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Heatmap%20of%20Rides%20by%20Day%20of%20the%20Week%20and%20User%20Type.png" class="visualization-img" alt="Heatmap of Rides by Day of the Week and User Type">
 
     <h3>3. Heatmap of Rides by Month</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Heatmap_of_Rides_by_Month.png" class="visualization-img" alt="Heatmap of Rides by Month">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Heatmap%20of%20Rides%20by%20Month.png" class="visualization-img" alt="Heatmap of Rides by Month">
 
     <h3>4. Proportional Analysis of Ride Types by User Type</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Proportional_Analysis_of_Ride_Types_by_User_Type.png" class="visualization-img" alt="Proportional Analysis of Ride Types by User Type">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Proportional%20Analysis%20of%20Ride%20Types%20by%20User%20Type.png" class="visualization-img" alt="Proportional Analysis of Ride Types by User Type">
 
     <h3>5. Rides per Month by User Type</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Rides_per_Month_by_User_Type.png" class="visualization-img" alt="Rides per Month by User Type">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Rides%20per%20Month%20by%20User%20Type.png" class="visualization-img" alt="Rides per Month by User Type">
 
     <h3>6. Total Rides per User Type</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Total_Rides_per_User_Type.png" class="visualization-img" alt="Total Rides per User Type">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Total%20Rides%20per%20User%20Type.png" class="visualization-img" alt="Total Rides per User Type">
 
     <h3>7. Trends Over Time</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Trends_Over_Time.png" class="visualization-img" alt="Trends Over Time">
-
-    <div class="code-title">Code for Analysis</div>
-
-    <h4>1. Data Import and Cleaning</h4>
-    <pre>
-# Importing libraries
-import pandas as pd
-import numpy as np
-
-# Reading data files
-data = pd.read_csv('path_to_file.csv')
-
-# Data cleaning
-data['ride_duration'] = pd.to_numeric(data['ride_duration'], errors='coerce')
-data.dropna(subset=['ride_duration'], inplace=True)
-    </pre>
-
-    <h4>2. Ride Duration Analysis by User Type</h4>
-    <pre>
-# Ride duration analysis by user type
-ride_duration_analysis = data.groupby('user_type')['ride_duration'].mean()
-
-# Plotting average ride duration by user type
-import matplotlib.pyplot as plt
-ride_duration_analysis.plot(kind='bar')
-plt.title('Average Ride Duration by User Type')
-plt.xlabel('User Type')
-plt.ylabel('Average Ride Duration (mins)')
-plt.show()
-    </pre>
-
-    <h4>3. Heatmap Analysis by Day of the Week and User Type</h4>
-    <pre>
-# Heatmap of rides by day of the week and user type
-import seaborn as sns
-
-pivot_data = data.pivot_table(values='ride_id', index='day_of_week', columns='user_type', aggfunc='count')
-
-plt.figure(figsize=(10,7))
-sns.heatmap(pivot_data, annot=True, cmap="YlGnBu")
-plt.title('Heatmap of Rides by Day of the Week and User Type')
-plt.show()
-    </pre>
-
-    <h4>4. Proportional Analysis of Ride Types</h4>
-    <pre>
-# Ride types analysis
-ride_type_analysis = data.groupby('user_type')['ride_type'].value_counts(normalize=True).unstack()
-
-# Plotting proportional analysis
-ride_type_analysis.plot(kind='bar', stacked=True)
-plt.title('Proportional Analysis of Ride Types by User Type')
-plt.ylabel('Proportion')
-plt.show()
-    </pre>
-
-    <h4>5. Trend Analysis Over Time</h4>
-    <pre>
-# Trend analysis over time
-data['ride_date'] = pd.to_datetime(data['ride_date'])
-
-monthly_trend = data.groupby(data['ride_date'].dt.to_period('M'))['ride_id'].count()
-
-# Plotting trends over time
-monthly_trend.plot(kind='line')
-plt.title('Trends Over Time')
-plt.xlabel('Month')
-plt.ylabel('Total Rides')
-plt.show()
-    </pre>
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Trends%20Over%20Time.png" class="visualization-img" alt="Trends Over Time">
 
     <div class="visualization-title">Code Screenshots</div>
 
     <h3>1. Bar Chart for Ride Duration Analysis</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Bar_Chart.png" class="visualization-img" alt="Bar Chart for Ride Duration Analysis">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Bar%20Chart.png" class="visualization-img" alt="Bar Chart for Ride Duration Analysis">
 
     <h3>2. Calculating Duration</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Calculating_Duration.png" class="visualization-img" alt="Calculating Duration">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Calculating%20Duration.png" class="visualization-img" alt="Calculating Duration">
 
     <h3>3. Heat Map for Ride Patterns</h3>
-    <img src="https://github.com/shrvnikam/portfolio/blob/main/Heat_Map.png" class="visualization-img" alt="Heat Map for Ride Patterns">
+    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Heat%20Map.png" class="visualization-img" alt="Heat Map for Ride Patterns">
 
     <div class="footer">
-      <p>&copy; 2025 | Your Name</p>
+      <p>&copy; 2025 | Shravan Nikam</p>
     </div>
   </div>
-
 </body>
 </html>
+
 
