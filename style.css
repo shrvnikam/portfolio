@@ -1,125 +1,85 @@
-/* General styling */
+/* Dark Mode Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-p {
-    font-size: 1.2em;
-}
-
-/* About, Education, Skills, Projects, Achievements Sections */
-section {
-    margin: 40px 10%;
+/* Container for Tabs */
+.tabs-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
+/* Tabs Navigation */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.tab {
+    color: #e0e0e0;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.tab:hover {
+    background-color: #4CAF50;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+h1, h2 {
+    color: #ffffff;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-/* Links & Project Styling */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Button-style links for Projects */
-.project-link {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.project-link:hover {
-    background-color: #45a049;
-}
-
-/* Contact Section */
-#contact ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-#projects {
-    text-align: center;  /* Center-align the whole section */
-    padding: 20px;
-}
-
-.project-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;  /* Add some space between projects */
-    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
-}
-
-.project {
-    text-align: left;  /* Keep project text left-aligned */
-    max-width: 300px;  /* Limit the width of each project for better alignment */
-}
-
-.project h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.project ul {
     list-style-type: disc;
-    margin-left: 20px;  /* Indent the bullet points */
+    margin-left: 20px;
 }
 
+/* Links inside projects */
 .project a.project-link {
-    text-decoration: none;        /* Remove underline */
-    color: white;                 /* Set text color to white */
-    font-weight: bold;            /* Make the text bold */
-    background-color: #4CAF50;    /* Set the background color to green */
-    padding: 5px 10px;            /* Add padding inside the box */
-    border-radius: 5px;           /* Optional: Add rounded corners to the box */
-    transition: background-color 0.3s ease;  /* Smooth transition effect for background color */
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4CAF50;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .project a.project-link:hover {
-    background-color: #2C6B2F;    /* Darken the green on hover */
-    text-decoration: none;        /* Ensure the text is not underlined when hovered */
+    background-color: #2C6B2F;
+    text-decoration: none;
 }
+
+/* Projects section */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.project {
+    text-align: left;
+    max-width: 300px;
+    padding: 10px;
+}
+
 
 
 
