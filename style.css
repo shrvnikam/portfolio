@@ -107,10 +107,17 @@ a:hover {
 }
 
 .project a.project-link {
-    text-decoration: none;
-    color: #4CAF50;  /* Add color to the link */
-    font-weight: bold;
+    text-decoration: none;        /* Remove underline */
+    color: #4CAF50;               /* Set the text color to green */
+    font-weight: bold;            /* Make the text bold */
+    transition: color 0.3s ease;  /* Smooth transition effect */
 }
+
+.project a.project-link:hover {
+    color: #2C6B2F;               /* Darken the green when hovered */
+    text-decoration: underline;   /* Underline the text on hover */
+}
+
 
 
 #contact li {
