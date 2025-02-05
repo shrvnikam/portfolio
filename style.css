@@ -49,9 +49,15 @@ h1, h2 {
     display: none;
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
+/* Show the "Go to Projects" button when in About tab */
+.next-step {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Hide the "Go to Projects" button in the Projects tab */
+#projects-content + .next-step {
+    display: none;
 }
 
 /* Links inside projects */
@@ -91,5 +97,10 @@ ul {
 /* Hide projects content by default */
 #projects-content {
     display: none;
+}
+
+/* Ensure all tabs content has spacing and is well-aligned */
+.tab-content {
+    padding: 20px;
 }
 
