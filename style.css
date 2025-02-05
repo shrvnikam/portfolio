@@ -1,114 +1,149 @@
-/* Dark Mode Styling */
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Body font is Helvetica Neue */
+/* Reset basic styling */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header Styling */
-h1, h2 {
-    font-family: 'Montserrat', sans-serif; /* Header font is Montserrat */
-    color: #ffffff;
-}
-
-/* Container for Tabs */
-.tabs-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
     padding: 20px;
 }
 
-/* Tabs Navigation */
+/* Tabs Container */
+.tabs-container {
+    max-width: 1000px;
+    margin: auto;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Styling for Tabs */
 .tabs {
     display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 10px;
+    justify-content: space-around;
+    border-bottom: 2px solid #444;
     margin-bottom: 20px;
-    border-radius: 5px;
 }
 
 .tab {
-    color: #e0e0e0;
-    padding: 15px 30px;
+    padding: 10px;
     cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
 .tab:hover {
-    background-color: #4CAF50;
+    background-color: #333;
 }
 
 /* Tab Content */
 .tab-content {
     display: none;
-}
-
-/* Show the "Go to Projects" button when in About tab */
-.next-step {
     margin-top: 20px;
+}
+
+#about-content {
+    display: block;
+}
+
+.next-step {
     text-align: center;
+    margin-top: 20px;
 }
 
-/* Hide the "Go to Projects" button in the Projects tab */
-#projects-content + .next-step {
-    display: none;
-}
-
-/* Links inside projects */
-.project a.project-link {
-    text-decoration: none;
-    color: #ffffff;
+button {
     background-color: #4CAF50;
-    padding: 5px 10px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.project a.project-link:hover {
-    background-color: #2C6B2F;
-    text-decoration: none;
+button:hover {
+    background-color: #388E3C;
 }
 
-/* Projects section */
+/* Container for Project Cards */
 .project-container {
     display: flex;
-    justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-/* Each individual project */
 .project {
-    text-align: left;
-    max-width: 300px;
-    padding: 10px;
-    margin-bottom: 20px; /* Ensures space at the bottom of each project */
-    flex-grow: 1; /* Allows the project to grow and align properly */
-}
-
-/* Adjust project details if needed */
-.project h3 {
-    margin-bottom: 10px; /* Adjusting for spacing between title and details */
-}
-
-/* Contact section */
-#contact li {
-    margin: 10px 0;
-    font-size: 1.2em;
-}
-
-/* Hide projects content by default */
-#projects-content {
-    display: none;
-}
-
-/* Ensure all tabs content has spacing and is well-aligned */
-.tab-content {
+    background-color: #2c2c2c;
     padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 10px); /* For two-column layout */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project ul {
+    color: #bbb;
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+.project ul li {
+    margin-bottom: 5px;
+}
+
+/* Adjust project card layout on smaller screens */
+@media (max-width: 768px) {
+    .project {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Styling for Links */
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a:hover {
+    color: #2C6B2F;
+}
+
+/* General Headings */
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-bottom: 20px;
 }
 
