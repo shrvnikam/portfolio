@@ -1,149 +1,125 @@
-/* Reset basic styling */
-* {
+/* Base styles */
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-    padding: 20px;
-}
-
-/* Tabs Container */
 .tabs-container {
-    max-width: 1000px;
-    margin: auto;
-    background-color: #1e1e1e;
-    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* Styling for Tabs */
 .tabs {
     display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid #444;
-    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 .tab {
-    padding: 10px;
+    margin-right: 20px;
     cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 
 .tab:hover {
-    background-color: #333;
+    color: #0073e6;
 }
 
-/* Tab Content */
 .tab-content {
     display: none;
     margin-top: 20px;
 }
 
-#about-content {
-    display: block;
-}
-
-.next-step {
-    text-align: center;
-    margin-top: 20px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
+.next-step button {
     padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
 }
 
-button:hover {
-    background-color: #388E3C;
-}
-
-/* Container for Project Cards */
 .project-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
 }
 
 .project {
-    background-color: #2c2c2c;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f0f0f0;
     padding: 20px;
-    border-radius: 10px;
-    width: calc(50% - 10px); /* For two-column layout */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-5px);
+    border-radius: 8px;
 }
 
 .project h3 {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
 }
 
 .project ul {
-    color: #bbb;
-    font-size: 1rem;
-    margin-left: 20px;
+    list-style: none;
+    padding-left: 0;
 }
 
 .project ul li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-/* Adjust project card layout on smaller screens */
-@media (max-width: 768px) {
+/* For screens larger than 1200px (Desktop) */
+@media (min-width: 1200px) {
     .project {
-        width: 100%; /* Full width on mobile */
+        width: 45%;
     }
 }
 
-/* Styling for Links */
-a {
-    text-decoration: none;
-    color: #4CAF50;
+/* For tablets (width between 768px and 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .project {
+        width: 48%;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-a:hover {
-    color: #2C6B2F;
+/* For mobile screens (width between 360px and 768px) */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .next-step button {
+        width: 100%;
+    }
 }
 
-/* General Headings */
-h1, h2 {
-    color: #ffffff;
-    margin-bottom: 10px;
+/* Smallest mobile screens (width less than 360px) */
+@media (max-width: 360px) {
+    .tabs {
+        font-size: 14px;
+    }
+
+    .project h3 {
+        font-size: 18px;
+    }
+
+    .next-step button {
+        font-size: 14px;
+    }
 }
 
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-ul {
-    margin-bottom: 20px;
-}
 
