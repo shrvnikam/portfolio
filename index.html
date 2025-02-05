@@ -3,78 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shravan Nikam - Data Analyst</title>
+    <title>Portfolio</title>
     
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome! I'm Shravan Nikam, a Data Analyst & Engineering Student 🎓</h1>
-        <p>Passionate about data analysis, problem-solving, and creativity. Let's dive into my portfolio!</p>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>My journey started in mechanical engineering, where I developed a strong foundation in strategic planning, market research, and computational analysis. Over time, I found myself drawn to the world of data analytics, where I could use my analytical mindset to uncover insights and drive impactful decisions.</p>
-        <p>Beyond analytics, I have a deep-rooted passion for football ⚽ and have captained my team at national tournaments, honing leadership and teamwork skills. I also graduated in Indian Non-Classical Music 🎹 (Piano) at 14, which has shaped my discipline and creativity.</p>
-    </section>
-
-    <section id="education">
-        <h2>Education 🎓</h2>
-        <p><strong>Bachelor of Engineering in Mechanical Engineering</strong> (Expected May 2025)<br>
-        <em>Father Conceicao Rodrigues Institute of Technology</em><br>
-        CGPA: 7.5/10 (Predicted)</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills 🖥️</h2>
-        <ul>
-            <li><strong>Data & Analytics</strong>: Excel, R, SQL, Tableau </li>
-            <li><strong>Business Skills</strong>: Strategic Planning, Market Research, Problem-Solving</li>
-            <li><strong>Engineering & Tech</strong>: Arduino, AutoCAD, SolidWorks</li>
-            <li><strong>Leadership & Creativity</strong>: Team Leadership, Event Organization, Music Composition</li>
+    <div class="tabs-container">
+        <ul class="tabs">
+            <li class="tab" id="about-tab">About Me</li>
+            <li class="tab" id="projects-tab">Projects</li>
         </ul>
-    </section>
 
-<section id="projects">
-    <h2>Projects 📌</h2>
-    <div class="project-container">
-        <div class="project">
-            <h3><a href="bike-share-project.html" class="project-link">Bike-Share Analysis</a></h3>
+        <div class="tab-content" id="about-content">
+            <h1>Welcome! I'm Shravan Nikam, a Data Analyst & Engineering Student 🎓</h1>
+            <p>Passionate about data analysis, problem-solving, and creativity. Let's dive into my portfolio!</p>
+            <h2>About Me</h2>
+            <p>My journey started in mechanical engineering, where I developed a strong foundation in strategic planning, market research, and computational analysis. Over time, I found myself drawn to the world of data analytics, where I could use my analytical mindset to uncover insights and drive impactful decisions.</p>
+            <p>Beyond analytics, I have a deep-rooted passion for football ⚽ and have captained my team at national tournaments, honing leadership and teamwork skills. I also graduated in Indian Non-Classical Music 🎹 (Piano) at 14, which has shaped my discipline and creativity.</p>
+
+            <h2>Education 🎓</h2>
+            <p><strong>Bachelor of Engineering in Mechanical Engineering (Expected May 2025)</strong></p>
+            <p>Father Conceicao Rodrigues Institute of Technology</p>
+            <p>CGPA: 7.5/10 (Predicted)</p>
+
+            <h2>Skills 🖥️</h2>
             <ul>
-                <li>Conducted an in-depth analysis of ride data to uncover patterns in customer behavior.</li>
-                <li>Used R programming & visualization tools to present findings.</li>
+                <li><strong>Data & Analytics:</strong> Excel, R, SQL, Tableau</li>
+                <li><strong>Business Skills:</strong> Strategic Planning, Market Research, Problem-Solving</li>
+                <li><strong>Engineering & Tech:</strong> Arduino, AutoCAD, SolidWorks</li>
+                <li><strong>Leadership & Creativity:</strong> Team Leadership, Event Organization, Music Composition</li>
             </ul>
         </div>
 
-        <div class="project">
-            <h3>Neuroprosthetic Arm</h3>
+        <div class="tab-content" id="projects-content">
+            <h2>Projects 📌</h2>
+            <div class="project-container">
+                <div class="project">
+                    <h3><a href="bike-share-project.html" class="project-link">Bike-Share Analysis</a></h3>
+                    <ul>
+                        <li>Conducted an in-depth analysis of ride data to uncover patterns in customer behavior.</li>
+                        <li>Used R programming & visualization tools to present findings.</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <h3>Neuroprosthetic Arm</h3>
+                    <ul>
+                        <li>Designed and developed a 3D-printed prosthetic arm with sensor-based control.</li>
+                        <li>Conducted market research & cost analysis to optimize affordability.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="achievements-content">
+            <h2>Achievements 🏆</h2>
             <ul>
-                <li>Designed and developed a 3D-printed prosthetic arm with sensor-based control.</li>
-                <li>Conducted market research & cost analysis to optimize affordability.</li>
+                <li>Winner, Spark-A-Thon Competition</li>
+                <li>Captain, Football Team</li>
+                <li>Graduated in Indian Non-Classical Music in Piano at 14</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="contact-content">
+            <h2>Contact 📧</h2>
+            <ul>
+                <li>Email: <a href="mailto:ssnikam0802@gmail.com">ssnikam0802@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/shravan-nikam" target="_blank">linkedin.com/in/shravan-nikam</a></li>
+                <li>GitHub Portfolio: <a href="https://shrvnikam.github.io/portfolio" target="_blank">shrvnikam.github.io/portfolio</a></li>
             </ul>
         </div>
     </div>
-</section>
 
-    <section id="achievements">
-        <h2>Achievements 🏆</h2>
-        <ul>
-            <li>Winner, Spark-A-Thon Competition </li>
-            <li>Captain, Football Team </li>
-            <li>Graduated in Indian Non-Classical Music in Piano at 14 </li>
-        </ul>
-    </section>
+    <script>
+        // JavaScript to toggle between tabs
+        document.getElementById('about-tab').addEventListener('click', function() {
+            document.getElementById('about-content').style.display = 'block';
+            document.getElementById('projects-content').style.display = 'none';
+            document.getElementById('achievements-content').style.display = 'none';
+            document.getElementById('contact-content').style.display = 'none';
+        });
 
-    <section id="contact">
-        <h2>Contact 📧</h2>
-        <ul>
-            <li>Email: ssnikam0802@gmail.com</li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/shravan-nikam" target="_blank">linkedin.com/in/shravan-nikam</a></li>
-            <li>GitHub Portfolio: <a href="https://shrvnikam.github.io/portfolio" target="_blank">shrvnikam.github.io/portfolio</a></li>
-        </ul>
-    </section>
+        document.getElementById('projects-tab').addEventListener('click', function() {
+            document.getElementById('about-content').style.display = 'none';
+            document.getElementById('projects-content').style.display = 'block';
+            document.getElementById('achievements-content').style.display = 'none';
+            document.getElementById('contact-content').style.display = 'none';
+        });
+
+        // Set initial tab to 'About Me'
+        document.getElementById('about-content').style.display = 'block';
+        document.getElementById('projects-content').style.display = 'none';
+        document.getElementById('achievements-content').style.display = 'none';
+        document.getElementById('contact-content').style.display = 'none';
+    </script>
 </body>
 </html>
+
 
