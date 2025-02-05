@@ -82,10 +82,18 @@ h1, h2 {
     flex-wrap: wrap;
 }
 
+/* Each individual project */
 .project {
     text-align: left;
     max-width: 300px;
     padding: 10px;
+    margin-bottom: 20px; /* Ensures space at the bottom of each project */
+    flex-grow: 1; /* Allows the project to grow and align properly */
+}
+
+/* Adjust project details if needed */
+.project h3 {
+    margin-bottom: 10px; /* Adjusting for spacing between title and details */
 }
 
 /* Contact section */
