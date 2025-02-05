@@ -2,9 +2,15 @@
 body {
     background-color: #121212;
     color: #e0e0e0;
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Body font is Helvetica Neue */
     margin: 0;
     padding: 0;
+}
+
+/* Header Styling */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Header font is Montserrat */
+    color: #ffffff;
 }
 
 /* Container for Tabs */
@@ -43,10 +49,6 @@ body {
     display: none;
 }
 
-h1, h2 {
-    color: #ffffff;
-}
-
 ul {
     list-style-type: disc;
     margin-left: 20px;
@@ -80,9 +82,7 @@ ul {
     padding: 10px;
 }
 
-
-
-
+/* Contact section */
 #contact li {
     margin: 10px 0;
     font-size: 1.2em;
@@ -92,3 +92,4 @@ ul {
 #projects-content {
     display: none;
 }
+
