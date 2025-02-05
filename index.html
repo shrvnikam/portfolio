@@ -19,6 +19,7 @@
             <li class="tab" id="projects-tab">Projects</li>
         </ul>
 
+        <!-- About Me Tab Content -->
         <div class="tab-content" id="about-content">
             <h1>Welcome! I'm Shravan Nikam, a Data Analyst & Engineering Student 🎓</h1>
             <p>Passionate about data analysis, problem-solving, and creativity. Let's dive into my portfolio!</p>
@@ -29,7 +30,6 @@
             <h2>Education 🎓</h2>
             <p><strong>Bachelor of Engineering in Mechanical Engineering (Expected May 2025)</strong></p>
             <p>Father Conceicao Rodrigues Institute of Technology</p>
-            
 
             <h2>Skills 🖥️</h2>
             <ul>
@@ -40,35 +40,35 @@
             </ul>
         </div>
 
-<div class="next-step">
-    <button onclick="document.getElementById('projects-tab').click()">Go to Projects</button>
-</div>
-
-        
-        <div class="tab-content" id="projects-content">
-    <h2>Projects 📌</h2>
-    <div class="project-container">
-        <div class="project">
-            <h3><a href="bike-share-project.html" class="project-link">Bike-Share Analysis</a></h3>
-            <ul>
-                <li>Conducted an in-depth analysis of ride data to uncover patterns in customer behavior.</li>
-                <li>Used R programming & visualization tools to present findings.</li>
-            </ul>
-            <p style="font-size: 0.9rem; color: #bbb; margin-top: 5px;">Click on the tab above to explore the project</p>
+        <!-- "Go to Projects" Button for About Me Tab -->
+        <div class="next-step">
+            <button onclick="document.getElementById('projects-tab').click()">Go to Projects</button>
         </div>
-    </div>
-</div>
 
+        <!-- Projects Tab Content -->
+        <div class="tab-content" id="projects-content">
+            <h2>Projects 📌</h2>
+            <div class="project-container">
                 <div class="project">
-                    <h3>Neuroprosthetic Arm</h3>
+                    <h3><a href="bike-share-project.html" class="project-link">Bike-Share Analysis</a></h3>
                     <ul>
-                        <li>Designed and developed a 3D-printed prosthetic arm with sensor-based control.</li>
-                        <li>Conducted market research & cost analysis to optimize affordability.</li>
+                        <li>Conducted an in-depth analysis of ride data to uncover patterns in customer behavior.</li>
+                        <li>Used R programming & visualization tools to present findings.</li>
                     </ul>
+                    <p style="font-size: 0.9rem; color: #bbb; margin-top: 5px;">Click on the tab above to explore the project</p>
                 </div>
+            </div>
+
+            <div class="project">
+                <h3>Neuroprosthetic Arm</h3>
+                <ul>
+                    <li>Designed and developed a 3D-printed prosthetic arm with sensor-based control.</li>
+                    <li>Conducted market research & cost analysis to optimize affordability.</li>
+                </ul>
             </div>
         </div>
 
+        <!-- Achievements Tab Content -->
         <div class="tab-content" id="achievements-content">
             <h2>Achievements 🏆</h2>
             <ul>
@@ -78,6 +78,7 @@
             </ul>
         </div>
 
+        <!-- Contact Tab Content -->
         <div class="tab-content" id="contact-content">
             <h2>Contact 📧</h2>
             <ul>
@@ -87,32 +88,39 @@
         </div>
     </div>
 
+    <!-- JavaScript for Tab Functionality -->
     <script>
-    // Function to hide all tab contents
-    function hideAllTabs() {
-        document.getElementById('about-content').style.display = 'none';
-        document.getElementById('projects-content').style.display = 'none';
-        document.getElementById('achievements-content').style.display = 'none';
-        document.getElementById('contact-content').style.display = 'none';
-    }
+        // Function to hide all tab contents
+        function hideAllTabs() {
+            document.getElementById('about-content').style.display = 'none';
+            document.getElementById('projects-content').style.display = 'none';
+            document.getElementById('achievements-content').style.display = 'none';
+            document.getElementById('contact-content').style.display = 'none';
+        }
 
-    // JavaScript to toggle between tabs
-    document.getElementById('about-tab').addEventListener('click', function() {
-        hideAllTabs();
-        document.getElementById('about-content').style.display = 'block';
-    });
+        // JavaScript to toggle between tabs
+        document.getElementById('about-tab').addEventListener('click', function() {
+            hideAllTabs();
+            document.getElementById('about-content').style.display = 'block';
+            document.querySelector('.next-step').style.display = 'block'; // Show button in About tab
+        });
 
-    document.getElementById('projects-tab').addEventListener('click', function() {
-        hideAllTabs();
-        document.getElementById('projects-content').style.display = 'block';
-    });
+        document.getElementById('projects-tab').addEventListener('click', function() {
+            hideAllTabs();
+            document.getElementById('projects-content').style.display = 'block';
+            document.querySelector('.next-step').style.display = 'none'; // Hide button in Projects tab
+        });
 
-    // Set initial tab to 'About Me'
-    hideAllTabs();
-    document.getElementById('about-content').style.display = 'block';
-</script>
+        // Set initial tab to 'About Me'
+        window.onload = function() {
+            hideAllTabs();
+            document.getElementById('about-content').style.display = 'block';
+            document.querySelector('.next-step').style.display = 'block'; // Ensure button shows on load for About tab
+        };
+    </script>
 
 </body>
 </html>
+
 
 
