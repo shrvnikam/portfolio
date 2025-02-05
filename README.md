@@ -9,7 +9,7 @@ I’m a passionate data analyst and engineering student, transitioning from mech
 - HTML
 - GitHub Pages
 - R, SQL, Tableau (for data analysis projects)
-- MATLAB, SolidWorks (for engineering projects)
+- SolidWorks, Arduino, AutoCad (for engineering projects)
 
 ## How to View the Portfolio
 You can view my portfolio online at [https://shrvnikam.github.io](https://shrvnikam.github.io).
