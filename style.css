@@ -87,3 +87,8 @@ ul {
     margin: 10px 0;
     font-size: 1.2em;
 }
+
+/* Hide projects content by default */
+#projects-content {
+    display: none;
+}
