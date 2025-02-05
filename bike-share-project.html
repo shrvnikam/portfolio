@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike-Share Analysis</title>
     <style>
+        /* Apply Helvetica for the body and Montserrat for headers */
         body {
             background-color: #121212;
             color: #e0e0e0;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica', sans-serif; /* Set Helvetica for body */
             line-height: 1.6;
             margin: 0;
             padding: 20px;
         }
+
         h1, h2, h3 {
             color: #ffffff;
+            font-family: 'Montserrat', sans-serif; /* Set Montserrat for headers */
         }
+
+        /* Container for the content */
         .container {
             max-width: 800px;
             margin: auto;
@@ -24,14 +28,34 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
+
+        /* Image styling */
         img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
             margin-top: 10px;
         }
+
+        /* Links inside content */
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        a:hover {
+            color: #2C6B2F;
+        }
+
+        /* Responsive styling for larger screens */
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Bike-Share Analysis: How Do Annual Members and Casual Riders Use Cyclistic Bikes Differently?</h1>
