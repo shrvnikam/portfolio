@@ -1,89 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bike-Share Analysis project, analyzing usage data for annual members and casual riders to drive revenue generation strategies.">
-  <meta name="author" content="Your Name">
-  <title>Bike-Share Analysis | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      margin-top: 50px;
-    }
-    .project-title {
-      color: #2C3E50;
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-    }
-    .project-description {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-top: 20px;
-    }
-    .visualization-title {
-      text-align: center;
-      font-size: 1.5rem;
-      margin-top: 30px;
-    }
-    .visualization-img {
-      display: block;
-      margin: 0 auto;
-      width: 80%;
-      max-width: 900px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike-Share Analysis</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="project-title">Bike-Share Analysis</div>
-    <div class="project-description">
-      This project analyzes the usage of Cyclistic bikes, comparing the behavior of annual members and casual riders to drive recommendations for increasing revenue.
+    <div class="container">
+        <h1>Bike-Share Analysis: How Do Annual Members and Casual Riders Use Cyclistic Bikes Differently?</h1>
+        
+        <h2>Introduction</h2>
+        <p>This case study focuses on analyzing Cyclistic's historical bike trip data to identify differences between casual riders and annual members. The goal is to provide actionable insights that can help Cyclistic convert more casual riders into annual members, as annual memberships have been identified as the most profitable revenue stream.</p>
+        
+        <h2>Given Situation</h2>
+        <p>Cyclistic is a Chicago-based bike-share program with over 5,800 bicycles and 692 docking stations. The company offers flexible pricing plans:</p>
+        <ul>
+            <li><strong>Casual Riders:</strong> Use single-ride or full-day passes.</li>
+            <li><strong>Annual Members:</strong> Subscribe to a membership plan.</li>
+        </ul>
+        <p>Cyclistic’s <strong>finance team</strong> found that annual members are more profitable than casual riders. The <strong>marketing team</strong>, led by Lily Moreno, believes there is an opportunity to increase revenue by converting casual riders into annual members.</p>
+        
+        <h2>Approach & Steps Taken</h2>
+        <p>To answer the key question, I conducted a <strong>Root Cause Analysis (RCA)</strong> and identified five specific research questions:</p>
+        <ol>
+            <li>Will converting casual riders to members increase revenue?</li>
+            <li>How do ride durations differ between casual riders and members?</li>
+            <li>During which time of the year are rides most frequent?</li>
+            <li>Where do casual riders and members take rides?</li>
+            <li>What is the total number of rides taken by each group?</li>
+        </ol>
+        <p>I followed a structured <strong>data analysis process (Ask → Prepare → Process → Analyze → Share → Act)</strong> to extract insights:</p>
+        <ul>
+            <li><strong>Data Cleaning & Processing:</strong> Worked with multiple large datasets to clean and format the data.</li>
+            <li><strong>Exploratory Data Analysis (EDA):</strong> Identified patterns in ride behavior through visualizations.</li>
+            <li><strong>Data Visualization:</strong> Used graphs and heatmaps to uncover trends in user behavior.</li>
+            <li><strong>Insights & Root Cause Analysis:</strong> Found key differences in riding habits between casual riders and members.</li>
+        </ul>
+        
+        <h2>Key Insights & Findings</h2>
+        <ul>
+            <li>🔹 <strong>Ride Duration:</strong> Casual riders take longer rides than members.</li>
+            <li>🔹 <strong>Seasonality:</strong> Casual ridership spikes in summer, while members ride consistently year-round.</li>
+            <li>🔹 <strong>Peak Usage Times:</strong> Casual riders prefer weekends, while members use bikes more on weekdays, likely for commuting.</li>
+            <li>🔹 <strong>Ride Locations:</strong> Casual riders frequent tourist-heavy areas, whereas members take rides more evenly distributed across the city.</li>
+            <li>🔹 <strong>Overall Ride Volume:</strong> Members take significantly more rides in total compared to casual users.</li>
+        </ul>
+        
+        <h2>Conclusion & Recommendations</h2>
+        <ul>
+            <li>🚴 <strong>Revenue Growth Opportunity:</strong> Converting casual riders to members will increase profitability due to higher ride frequency among members.</li>
+            <li>🌞 <strong>Summer Membership Offer:</strong> Since casual usage spikes in summer, offering a seasonal discount can encourage conversions.</li>
+            <li>🏞 <strong>Touring Membership Plans:</strong> Casual users mainly ride for leisure—creating a <strong>tourist-friendly membership plan</strong> with benefits could attract them.</li>
+            <li>📍 <strong>Targeted Digital Marketing:</strong> Utilize data-driven location-based ads to promote membership in high casual-rider zones.</li>
+        </ul>
+        
+        <h2>Visual Analysis</h2>
+        <p>Below are key visualizations that support my findings:</p>
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Average%20Ride%20Duration%20by%20User%20Type.png" alt="Average Ride Duration by User Type">
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Heatmap%20of%20Rides%20by%20Day%20of%20the%20Week%20and%20User%20Type.png" alt="Heatmap of Rides by Day of the Week and User Type">
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Heatmap%20of%20Rides%20by%20Month.png" alt="Heatmap of Rides by Month">
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Proportional%20Analysis%20of%20Ride%20Types%20by%20User%20Type.png" alt="Proportional Analysis of Ride Types by User Type">
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Rides%20per%20Month%20by%20User%20Type.png" alt="Rides per Month by User Type">
+        
+        <h2>Code Implementation</h2>
+        <p>Below are screenshots of the key code implementations used in this analysis:</p>
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Bar%20Chart.png" alt="Bar Chart Code">
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Calculating%20Duration.png" alt="Calculating Duration Code">
+        <img src="https://github.com/shrvnikam/portfolio/blob/main/Heat%20Map.png" alt="Heat Map Code">
     </div>
-
-    <div class="visualization-title">Visualizations</div>
-
-    <h3>1. Average Ride Duration by User Type</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Average%20Ride%20Duration%20by%20User%20Type.png" class="visualization-img" alt="Average Ride Duration by User Type">
-
-    <h3>2. Heatmap of Rides by Day of the Week and User Type</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Heatmap%20of%20Rides%20by%20Day%20of%20the%20Week%20and%20User%20Type.png" class="visualization-img" alt="Heatmap of Rides by Day of the Week and User Type">
-
-    <h3>3. Heatmap of Rides by Month</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Heatmap%20of%20Rides%20by%20Month.png" class="visualization-img" alt="Heatmap of Rides by Month">
-
-    <h3>4. Proportional Analysis of Ride Types by User Type</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Proportional%20Analysis%20of%20Ride%20Types%20by%20User%20Type.png" class="visualization-img" alt="Proportional Analysis of Ride Types by User Type">
-
-    <h3>5. Rides per Month by User Type</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Rides%20per%20Month%20by%20User%20Type.png" class="visualization-img" alt="Rides per Month by User Type">
-
-    <h3>6. Total Rides per User Type</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Total%20Rides%20per%20User%20Type.png" class="visualization-img" alt="Total Rides per User Type">
-
-    <h3>7. Trends Over Time</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Trends%20Over%20Time.png" class="visualization-img" alt="Trends Over Time">
-
-    <div class="visualization-title">Code Screenshots</div>
-
-    <h3>1. Bar Chart for Ride Duration Analysis</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Bar%20Chart.png" class="visualization-img" alt="Bar Chart for Ride Duration Analysis">
-
-    <h3>2. Calculating Duration</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Calculating%20Duration.png" class="visualization-img" alt="Calculating Duration">
-
-    <h3>3. Heat Map for Ride Patterns</h3>
-    <img src="https://raw.githubusercontent.com/shrvnikam/portfolio/main/Heat%20Map.png" class="visualization-img" alt="Heat Map for Ride Patterns">
-
-    <div class="footer">
-      <p>&copy; 2025 | Shravan Nikam</p>
-    </div>
-  </div>
 </body>
 </html>
+
 
 
