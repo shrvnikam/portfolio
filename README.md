@@ -28,6 +28,6 @@ This project is open-source and available for anyone interested in learning from
 
 ---
 
-© 2025 Your Name. All rights reserved.
+© 2025 Shravan Nikam. All rights reserved.
 
 
