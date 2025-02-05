@@ -1,15 +1,17 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike-Share Analysis</title>
     <style>
+        /* Include the same styles from index.html for consistency */
         /* Apply Helvetica for the body and Montserrat for headers */
         body {
             background-color: #121212;
             color: #e0e0e0;
-            font-family: 'Helvetica', sans-serif; /* Set Helvetica for body */
+            font-family: 'Helvetica', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
@@ -17,7 +19,7 @@
 
         h1, h2, h3 {
             color: #ffffff;
-            font-family: 'Montserrat', sans-serif; /* Set Montserrat for headers */
+            font-family: 'Montserrat', sans-serif;
         }
 
         /* Container for the content */
@@ -54,10 +56,95 @@
                 padding: 40px;
             }
         }
+
+        /* Tabs styles (same as index.html) */
+        .tabs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            border-bottom: 2px solid #333;
+        }
+
+        .tab {
+            margin-right: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .tab:hover {
+            color: #00aaff;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* Button */
+        .next-step button {
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .next-step button:hover {
+            background-color: #0088cc;
+        }
+
     </style>
 </head>
 
 <body>
+    <div class="tabs-container">
+        <ul class="tabs">
+            <li class="tab" id="about-tab">About Me</li>
+            <li class="tab" id="projects-tab">Projects</li>
+        </ul>
+
+        <!-- About Me Tab Content -->
+        <div class="tab-content" id="about-content">
+            <h1>Welcome! I'm Shravan Nikam, a Data Analyst & Engineering Student 🎓</h1>
+            <p>Passionate about data analysis, problem-solving, and creativity. Let's dive into my portfolio!</p>
+        </div>
+
+        <!-- Projects Tab Content -->
+        <div class="tab-content" id="projects-content">
+            <h2>Projects 📌</h2>
+            <div class="project-container">
+                <div class="project">
+                    <h3><a href="bike-share-project.html" class="project-link">Bike-Share Analysis</a></h3>
+                    <ul>
+                        <li>Conducted an in-depth analysis of ride data to uncover patterns in customer behavior.</li>
+                        <li>Used R programming & visualization tools to present findings.</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: #bbb; margin-top: 5px;">Click on the tab above to explore the project</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Neuroprosthetic Arm</h3>
+                <ul>
+                    <li>Designed and developed a 3D-printed prosthetic arm with sensor-based control.</li>
+                    <li>Conducted market research & cost analysis to optimize affordability.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <h1>Bike-Share Analysis: How Do Annual Members and Casual Riders Use Cyclistic Bikes Differently?</h1>
         
@@ -118,13 +205,27 @@
         <img src="https://i.imgur.com/eKGtNG4.png" alt="Proportional Analysis of Ride Types by User Type">
         
         <h2>Code Implementation</h2>
-        <p>Below are screenshots of the key code implementations used in this analysis:</p>
-        <img src="https://i.imgur.com/3qKyLoA.png" alt="Bar Chart Code">
-        <img src="https://i.imgur.com/fXA6dGy.png" alt="Calculating Duration Code">
-        <img src="https://i.imgur.com/oAtLzsz.png" alt="Heat Map Code">
+        <p>Below are screenshots of the key code implementations used to analyze the data.</p>
+        <div class="next-step">
+            <button onclick="window.location.href='bike-share-analysis-code.html'">View Code Implementation</button>
+        </div>
     </div>
+
+    <script>
+        // JavaScript for Tab Navigation
+        document.getElementById('about-tab').addEventListener('click', function() {
+            document.getElementById('about-content').style.display = 'block';
+            document.getElementById('projects-content').style.display = 'none';
+        });
+
+        document.getElementById('projects-tab').addEventListener('click', function() {
+            document.getElementById('about-content').style.display = 'none';
+            document.getElementById('projects-content').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
+
 
 
 
