@@ -39,6 +39,7 @@ body {
 .tab-content {
     display: none;
     margin-top: 20px;
+    color: #ffffff;  /* Set text color to white in tab content */
 }
 
 /* Button */
@@ -84,13 +85,13 @@ body {
 
 .project ul li {
     margin-bottom: 10px;
-    color: #bbbbbb; /* Light grey text for readability */
+    color: #ffffff; /* White text for the list items */
 }
 
 /* Faint text and main text in the same color */
 .project p {
     font-size: 0.9rem;
-    color: #bbbbbb; /* Same light grey for consistency */
+    color: #ffffff; /* White for paragraph text */
     margin-top: 5px;
 }
 
