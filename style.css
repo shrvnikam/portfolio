@@ -4,8 +4,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
 }
 
+/* Tabs */
 .tabs-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -16,6 +19,7 @@ body {
     display: flex;
     list-style: none;
     padding: 0;
+    border-bottom: 2px solid #333;
 }
 
 .tab {
@@ -24,26 +28,35 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 18px;
+    color: #ffffff;
 }
 
 .tab:hover {
-    color: #0073e6;
+    color: #00aaff;
 }
 
+/* Tab Content */
 .tab-content {
     display: none;
     margin-top: 20px;
 }
 
+/* Button */
 .next-step button {
     padding: 10px 20px;
-    background-color: #0073e6;
+    background-color: #00aaff;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
 }
 
+.next-step button:hover {
+    background-color: #0088cc;
+}
+
+/* Projects Section */
 .project-container {
     display: flex;
     flex-wrap: wrap;
@@ -53,14 +66,15 @@ body {
 .project {
     width: 100%;
     box-sizing: border-box;
-    background: #f0f0f0;
+    background: #1e1e1e; /* Darker shade for project boxes */
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid #333; /* Subtle border */
 }
 
 .project h3 {
     font-size: 22px;
-    color: #333;
+    color: #00aaff; /* Bright text for better contrast */
 }
 
 .project ul {
@@ -70,56 +84,61 @@ body {
 
 .project ul li {
     margin-bottom: 10px;
+    color: #bbbbbb; /* Light grey text for readability */
 }
 
-/* For screens larger than 1200px (Desktop) */
+/* Faint text and main text in the same color */
+.project p {
+    font-size: 0.9rem;
+    color: #bbbbbb; /* Same light grey for consistency */
+    margin-top: 5px;
+}
+
+/* Responsiveness */
+/* Desktop screens */
 @media (min-width: 1200px) {
     .project {
         width: 45%;
     }
 }
 
-/* For tablets (width between 768px and 1024px) */
+/* Tablets */
 @media (max-width: 1024px) and (min-width: 768px) {
     .project {
         width: 48%;
     }
-
     .tabs {
         flex-direction: column;
         align-items: flex-start;
     }
 }
 
-/* For mobile screens (width between 360px and 768px) */
+/* Mobile screens */
 @media (max-width: 768px) {
     .tabs {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .project {
         width: 100%;
     }
-
     .next-step button {
         width: 100%;
     }
 }
 
-/* Smallest mobile screens (width less than 360px) */
+/* Smallest screens */
 @media (max-width: 360px) {
     .tabs {
         font-size: 14px;
     }
-
     .project h3 {
         font-size: 18px;
     }
-
     .next-step button {
         font-size: 14px;
     }
 }
+
 
 
