@@ -88,27 +88,30 @@
     </div>
 
     <script>
-        // JavaScript to toggle between tabs
-        document.getElementById('about-tab').addEventListener('click', function() {
-            document.getElementById('about-content').style.display = 'block';
-            document.getElementById('projects-content').style.display = 'none';
-            document.getElementById('achievements-content').style.display = 'none';
-            document.getElementById('contact-content').style.display = 'none';
-        });
-
-        document.getElementById('projects-tab').addEventListener('click', function() {
-            document.getElementById('about-content').style.display = 'none';
-            document.getElementById('projects-content').style.display = 'block';
-            document.getElementById('achievements-content').style.display = 'none';
-            document.getElementById('contact-content').style.display = 'none';
-        });
-
-        // Set initial tab to 'About Me'
-        document.getElementById('about-content').style.display = 'block';
+    // Function to hide all tab contents
+    function hideAllTabs() {
+        document.getElementById('about-content').style.display = 'none';
         document.getElementById('projects-content').style.display = 'none';
         document.getElementById('achievements-content').style.display = 'none';
         document.getElementById('contact-content').style.display = 'none';
-    </script>
+    }
+
+    // JavaScript to toggle between tabs
+    document.getElementById('about-tab').addEventListener('click', function() {
+        hideAllTabs();
+        document.getElementById('about-content').style.display = 'block';
+    });
+
+    document.getElementById('projects-tab').addEventListener('click', function() {
+        hideAllTabs();
+        document.getElementById('projects-content').style.display = 'block';
+    });
+
+    // Set initial tab to 'About Me'
+    hideAllTabs();
+    document.getElementById('about-content').style.display = 'block';
+</script>
+
 </body>
 </html>
 
