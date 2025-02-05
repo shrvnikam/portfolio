@@ -108,14 +108,17 @@ a:hover {
 
 .project a.project-link {
     text-decoration: none;        /* Remove underline */
-    color: #4CAF50;               /* Set the text color to green */
+    color: white;                 /* Set text color to white */
     font-weight: bold;            /* Make the text bold */
-    transition: color 0.3s ease;  /* Smooth transition effect */
+    background-color: #4CAF50;    /* Set the background color to green */
+    padding: 5px 10px;            /* Add padding inside the box */
+    border-radius: 5px;           /* Optional: Add rounded corners to the box */
+    transition: background-color 0.3s ease;  /* Smooth transition effect for background color */
 }
 
 .project a.project-link:hover {
-    color: #2C6B2F;               /* Darken the green when hovered */
-    text-decoration: underline;   /* Underline the text on hover */
+    background-color: #2C6B2F;    /* Darken the green on hover */
+    text-decoration: none;        /* Ensure the text is not underlined when hovered */
 }
 
 
